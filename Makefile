@@ -1,6 +1,6 @@
 link: move
 	echo "Linking foo"
-	gcc -Werror -Wfatal-errors -Wpedantic -Wall -Wextra -o test main.c -lfoo
+	gcc -Werror -Wfatal-errors -Wpedantic -Wall -Wextra -o test main.c -lfoo -fanalyzer -Wanalyzer-too-complex -ggdb --coverage
 
 move: libfoo.so
 	echo "Moving libfoo.so to /usr/lib"
@@ -19,6 +19,6 @@ compile: foo.c
 
 clean:
 	echo "Cleaning up"
-	rm -f foo.o foo.gcda foo.gcno foo.gcov foo.c.* foo.i.* foo.s.* foo.s foo.o foo.gcda foo.gcno foo.gcov libfoo.so test
+	rm -f foo.o foo.gcda foo.gcno foo.gcov foo.c.* foo.i.* foo.s.* foo.s foo.o foo.gcda *.gcno foo.gcov libfoo.so test
 
 .PHONY: clean compile foo link move
