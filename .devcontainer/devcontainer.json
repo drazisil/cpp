@@ -12,6 +12,11 @@
 				"ms-vscode.cpptools-extension-pack"
 			]
 		}
+	},
+	"features": {
+		"ghcr.io/itsmechlark/features/1password:1": {
+			"version": "2.29"
+		}
 	}
 	// Features to add to the dev container. More info: https://containers.dev/features.
 	// "features": {},
