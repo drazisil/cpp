@@ -13,6 +13,9 @@ int main(int argc, char const *argv[])
     struct sockaddr_in listeningAddress;
     struct sockaddr_in clientAddress;
 
+    printf("argc: %d\n", argc);
+    printf("argv[0]: %s\n", argv[0]);
+
     listeningAddress.sin_family = AF_INET;
     listeningAddress.sin_port = htons(3000);
     listeningAddress.sin_addr.s_addr = INADDR_ANY;
